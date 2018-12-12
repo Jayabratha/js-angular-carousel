@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { JsNgCarouselModule } from 'js-ng-carousel';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    JsNgCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

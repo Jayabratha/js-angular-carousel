@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "js-ng-carousel": [
+        "dist/js-ng-carousel"
+      ],
+      "js-ng-carousel/*": [
+        "dist/js-ng-carousel/*"
+      ]
+    }
   }
 }

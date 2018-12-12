@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/icon-styles.css"
             ],
             "scripts": []
           },
@@ -123,6 +124,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "js-ng-carousel": {
+      "root": "projects/js-ng-carousel",
+      "sourceRoot": "projects/js-ng-carousel/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/js-ng-carousel/tsconfig.lib.json",
+            "project": "projects/js-ng-carousel/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/js-ng-carousel/src/test.ts",
+            "tsConfig": "projects/js-ng-carousel/tsconfig.spec.json",
+            "karmaConfig": "projects/js-ng-carousel/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/js-ng-carousel/tsconfig.lib.json",
+              "projects/js-ng-carousel/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
