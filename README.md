@@ -36,7 +36,7 @@ Configuration can be passed using the [config] input
     
     textAlignment: string --> allowed alignment values: 'right' | 'center' | 'left' | default is 'left'
 
-    applyBoxshadow: boolean --> whether to show box shadow | default is false
+    applyBoxShadow: boolean --> whether to show box shadow | default is false
   
 
 ## Development server
