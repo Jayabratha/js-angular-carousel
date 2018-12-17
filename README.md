@@ -35,6 +35,8 @@ Configuration can be passed using the [config] input
     showText: boolean --> whether to show title and description text | default is true
     
     textAlignment: string --> allowed alignment values: 'right' | 'center' | 'left' | default is 'left'
+
+    applyBoxshadow: boolean --> whether to show box shadow | default is false
   
 
 ## Development server

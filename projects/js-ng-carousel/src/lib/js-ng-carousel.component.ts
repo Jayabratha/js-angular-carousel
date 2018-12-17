@@ -36,7 +36,8 @@ export class JsNgCarouselComponent implements OnChanges, OnInit, OnDestroy {
     leftArrowClassName: '',
     rightArrowClassName: '',
     showText: true,
-    textAlignment: 'right'
+    textAlignment: 'right',
+    applyBoxShadow: false
   }
   showText: boolean = true;
   textAlignment: string = 'right';
@@ -144,7 +145,7 @@ export class JsNgCarouselComponent implements OnChanges, OnInit, OnDestroy {
     setTimeout(() => {
       this.activeSlide[direction] = true;
       nextSlide[direction] = true;
-    }, 0);
+    }, 100);
     setTimeout(() => {
       this.activeSlide[direction] = false;
       nextSlide[direction] = false;
@@ -152,7 +153,7 @@ export class JsNgCarouselComponent implements OnChanges, OnInit, OnDestroy {
       this.activeSlide["active"] = false;
       nextSlide["active"] = true;
       this.activeSlide = nextSlide;
-    }, transitionDuration);
+    }, transitionDuration + 100);
   }
 
   start() {

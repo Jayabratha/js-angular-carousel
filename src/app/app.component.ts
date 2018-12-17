@@ -28,7 +28,8 @@ export class AppComponent {
   }];
   carouselConfig = {
     leftArrowClassName: 'icon-angle-left',
-    rightArrowClassName: 'icon-angle-right'
+    rightArrowClassName: 'icon-angle-right',
+    applyBoxShadow: true
   }
 
 }

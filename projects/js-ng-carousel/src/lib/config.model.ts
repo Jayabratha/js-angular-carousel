@@ -3,5 +3,6 @@ export interface CarouselConfig {
     leftArrowClassName: string,
     rightArrowClassName: string,
     showText: boolean,
-    textAlignment: string
+    textAlignment: string,
+    applyBoxShadow: boolean
 }
