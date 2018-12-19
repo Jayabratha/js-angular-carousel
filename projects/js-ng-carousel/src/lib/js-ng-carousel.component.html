@@ -1,4 +1,4 @@
-<div class="carousel-wrapper">
+<div class="carousel-wrapper" (swipeleft)="showNext(true)" (swiperight)="showPrev(true)">
   <ul class="carousel-list">
     <li id="{{item.id}}" class="carousel-item" 
         *ngFor="let item of slideItems; let first = first" 
@@ -6,9 +6,7 @@
                     'left': item.left,
                     'right': item.right,
                     'next': item.next,
-                    'prev': item.prev}" 
-        (swipeleft)="showNext(true)"
-        (swiperight)="showPrev(true)">
+                    'prev': item.prev}">
       <img title="{{item.title}}" alt="{{item.alt}}" [src]="item.url" (load)="updateProgress($event)" />
       <div class="slide-info" *ngIf="conf.showText" [style.text-align]="conf.textAlignment">
         <div class="title">{{item.title}}</div>
